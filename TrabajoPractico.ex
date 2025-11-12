@@ -67,8 +67,26 @@ defmodule TrabajoPractico do
       end
     end
   end
+
+
+#48 Defina una función llamada “Select” que devuelva la lista de elementos que cumplen con una determinada condición.
+
+def select(lista, condicion) do
+    if lista == [] do
+        []
+    else if condicion.(hd(lista)) do
+        [hd(lista) | select(tl(lista), condicion)]
+    else select(tl(lista), condicion)
+    end
+    end
+
 end
+
+
+end
+
 
 IO.inspect(TrabajoPractico.procesarLista([1, 2, 3]))
 IO.puts(TrabajoPractico.maximo([5, 7, 8, 4]))
 IO.puts(TrabajoPractico.parentesisBalanceados([0, 0, 1, 1, 0, 1, 1], 0))
+IO.inspect(TrabajoPractico.select([1,2,3,4,5], fn x -> rem(x,2) == 0 end))
