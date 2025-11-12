@@ -69,7 +69,7 @@ defmodule TrabajoPractico do
   end
 
 
-#48 Defina una función llamada “Select” que devuelva la lista de elementos que cumplen con una determinada condición.
+#41 Defina una función llamada “Select” que devuelva la lista de elementos que cumplen con una determinada condición.
 
 def select(lista, condicion) do
     if lista == [] do
@@ -82,6 +82,15 @@ def select(lista, condicion) do
 
 end
 
+#42 Defina una función llamada “Map” o “Collect” que devuelva la lista de los resultados de aplicar una función que se pasa como parámetro a cada elemento de la lista de entrada.
+
+def map(lista, funcion)do
+     if lista == [] do
+        []
+     else [funcion.(hd(lista)) | map(tl(lista), funcion)]
+    end
+end
+
 
 end
 
@@ -90,3 +99,4 @@ IO.inspect(TrabajoPractico.procesarLista([1, 2, 3]))
 IO.puts(TrabajoPractico.maximo([5, 7, 8, 4]))
 IO.puts(TrabajoPractico.parentesisBalanceados([0, 0, 1, 1, 0, 1, 1], 0))
 IO.inspect(TrabajoPractico.select([1,2,3,4,5], fn x -> rem(x,2) == 0 end))
+IO.inspect(TrabajoPractico.map([1,2,3,4,5], fn x -> x*2 end))
