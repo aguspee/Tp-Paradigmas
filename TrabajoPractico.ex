@@ -1,4 +1,5 @@
 defmodule TrabajoPractico do
+  # INTEGRANTES: Perez Agustina, Ramirez Agustin Misael, Carena Joaquin
   # 16 Escriba una función que devuelva el mínimo elemento de una lista.
   # todas las listas no vacias de un mismo tipo que puedan compararse mediante el <
   def minimo(lista) do
