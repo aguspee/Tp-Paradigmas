@@ -27,7 +27,7 @@ defmodule TrabajoPractico do
     end
   end
 
-  # 18 Defina una función que tome una lista de números y devuelva una 3-upla formada por el promedio, el máximo y el mínimo de la lista.
+  # 18 Defina una función que tome una lista de números y devuelva una 3-upla formada por el promedio, el máximo y el mínimo de la lista. ACLARACION: Este ejercicio NO nos tocaba, leimos mal las actividades y lo hicimos sin querer
   # el dominio es todos los numeros reales, y la lista debe tener al menos un elemento
   def sumarLista(lista) do
     if lista == [] do
